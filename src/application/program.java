@@ -33,34 +33,28 @@ public class program {
 			char tProduct = sc.next().charAt(0);
 			sc.nextLine();
 			
+			System.out.print("Name: ");
+			productName = sc.nextLine();
+			System.out.print("Price: ");
+			productPrice = sc.nextDouble();
+			sc.nextLine();
+			
 			if (tProduct == 'c' ) {
-				System.out.print("Name: ");
-				productName = sc.nextLine();
-				System.out.print("Price: ");
-				productPrice = sc.nextDouble();
-				sc.nextLine();
 				
 				Product product = new Product(productName, productPrice);
 				products.add(product);
 				
 			}else if (tProduct == 'u') {
-				System.out.print("Name: ");
-				productName = sc.nextLine();
-				System.out.print("Price: ");
-				productPrice = sc.nextDouble();
-				sc.nextLine();
+				
 				System.out.print("Manufactured date (DD/MM/YYYY): ");
 				Date manufaturedDate = sdf.parse(sc.next());
+				sc.nextLine();
 				
 				UsedProduct product = new UsedProduct(productName,productPrice,manufaturedDate);				
 				products.add(product);
 				
 			}else if (tProduct =='i'){
-				System.out.print("Name: ");
-				productName = sc.nextLine();
-				System.out.print("Price: ");
-				productPrice = sc.nextDouble();
-				sc.nextLine();
+				
 				System.out.print("Customs fee: ");
 				Double cf = sc.nextDouble();
 				sc.nextLine();
